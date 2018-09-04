@@ -1,55 +1,75 @@
-# начало работы с git
+# Prototype model of site www.glavchek.ru
 
-#### Basic mark-down
 #### add ssh-key to macbook
 
-
 TITLE: 
-Cube - 100% Fully Responsive Free HTML5 Bootstrap Template
+GlavChek.ru - 100% Fully Responsive Custum-rebuild WEB application with one default and 1 working HTML5/Bootstrap/CSS template
 
 AUTHOR:
-DESIGNED & DEVELOPED by FreeHTML5.co
+DESIGNED & DEVELOPED by t7s
 
-Website: https://freehtml5.co/
-Twitter: http://twitter.com/fh5co
-Facebook: http://facebook.com/fh5co
+Website: https://moveme.pro/
+Twitter: http://twitter.com/
+Facebook: http://facebook.com/
 
+### Rate $ per hour:
+Backend:
+- php/mySQL - 4$/wh;
+- regenx - 5$/wh;
+- server - 2$wh - nginx congiguring;
 
-CREDITS:
+Frontend:
+- html/css3/bootstrap - 5$/wh;
+- ajax - 6$/wh;
 
+#### Server:
+LEMP stack:
+ - Linux
+ - nginx (+regexp and default config chenges
+ - mySQL (not setted yet)
+ - PHP7.* (nginx configured +regexp)
+#### FrameWorks and additional libs:
 Bootstrap
-http://getbootstrap.com/
-
-jQuery
-http://jquery.com/
-
-jQuery Easing
-http://gsgd.co.uk/sandbox/jquery/easing/
-
-Modernizr
-http://modernizr.com/
-
+	http://getbootstrap.com/
+jQuery 		
+	http://jquery.com/
 Google Fonts
-https://www.google.com/fonts/
+	https://www.google.com/fonts/
+CSS animation and trasitions
+	http://ccs.com
+ 
+#### Backend:
+php+mySQL(setted, but not used yet)+regexp+nginx
++phpmyadmin(not set yet)
 
-Icomoon
-https://icomoon.io/app/
+#### FrontEnd
+html5+css3+ajax(not used yet)
 
-Respond JS
-https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
+#### Architecture: MCV
+DESCRIPTION of file locations:
 
-animate.css
-http://daneden.me/animate
+WEB-application location:
+/app
 
-jQuery Waypoint
-https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
+Basic WEB-Core (Model, Controller and View main files):
+/resourses/vendore/core/base
 
-Owl Carousel
-http://www.owlcarousel.owlgraphic.com/
+Additional php Labs (like email-sending):
+/resourses/vendore/labs
 
-Magnific Popup
-http://dimsemenov.com/plugins/magnific-popup/
+Models: 
+not setted or configured yet
 
-Demo Images:
-http://unsplash.com
-http://pixeden.com
+Controllers:
+/app/Controllers
+
+Views:
+/resourses/views/
+Views::template (default.php and main.php), Views::layouts and Views::partiels(not sure becourse i didn't set it yet)
+/resourses/views/layouts
+
+
+
+
+
+
