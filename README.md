@@ -1,51 +1,38 @@
-# Prototype model of site www.glavchek.ru
-
-#### add ssh-key to macbook
-
-TITLE: 
+# Glavchek Project
 GlavChek.ru - 100% Fully Responsive Custum-rebuild WEB application with one default and 1 working HTML5/Bootstrap/CSS template
 
-AUTHOR:
-DESIGNED & DEVELOPED by t7s
+##Status:
+Prototype model of site www.glavchek.ru
 
-Website: https://moveme.pro/
-Twitter: http://twitter.com/
-Facebook: http://facebook.com/
+## Getting Started
+"These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system."
+...
+to deploy sth on server u need to add ssh-key (on DigitalOcean or using directly ssh connetion )
 
-### Rate $ per hour:
+### Prerequisites
+
+What things you need to install the software and how to install them
 Backend:
-- php/mySQL - 4$/wh;
-- regenx - 5$/wh;
-- server - 2$wh - nginx congiguring;
-
-Frontend:
-- html/css3/bootstrap - 5$/wh;
-- ajax - 6$/wh;
-
-#### Server:
-LEMP stack:
+1. Server: LEMP stack:
  - Linux
  - nginx (+regexp and default config chenges
  - mySQL (not setted yet)
  - PHP7.* (nginx configured +regexp)
-#### FrameWorks and additional libs:
-Bootstrap
-	http://getbootstrap.com/
-jQuery 		
-	http://jquery.com/
-Google Fonts
-	https://www.google.com/fonts/
-CSS animation and trasitions
-	http://ccs.com
- 
-#### Backend:
-php+mySQL(setted, but not used yet)+regexp+nginx
-+phpmyadmin(not set yet)
+ - phpmyadmin + nginx's default file configuering
+FrontEnd
+2. FrameWorks and additional libs:
+ - Bootstrap: http://getbootstrap.com/
+ - jQuery: http://jquery.com/
+ - Google Fonts: https://www.google.com/fonts/
+ - CSS animation and trasitions: http://ccs.com
+ - ajax(not used yet)
 
-#### FrontEnd
-html5+css3+ajax(not used yet)
+### Installing
 
-#### Architecture: MCV
+on working...
+
+
+## Architecture: MCV
 DESCRIPTION of file locations:
 
 WEB-application location:
@@ -57,7 +44,7 @@ Basic WEB-Core (Model, Controller and View main files):
 Additional php Labs (like email-sending):
 /resourses/vendore/labs
 
-Models: 
+Models:
 not setted or configured yet
 
 Controllers:
@@ -68,8 +55,19 @@ Views:
 Views::template (default.php and main.php), Views::layouts and Views::partiels(not sure becourse i didn't set it yet)
 /resourses/views/layouts
 
+## Authors
+AUTHOR:
+DESIGNED & DEVELOPED by t7s
 
+Website: https://moveme.pro/
+Twitter: http://twitter.com/
+Facebook: http://facebook.com/
 
-
-
-
+### Author's rate (USD per hour):
+Backend:
+- php/mySQL - 4$/wh;
+- regenx - 5$/wh;
+- server - 2$wh - nginx congiguring;
+Frontend:
+- html/css3/bootstrap - 5$/wh;
+- ajax - 6$/wh;
