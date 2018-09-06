@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-namespace app\http\controllers;
+namespace app\Http\Controllers;
 
 // PostNew controller - Opisanie
 
