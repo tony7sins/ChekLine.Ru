@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use app\Models\Main;
+//use app\Models\Main;
+
 /**
 * Main controller - Opisanie
 **/

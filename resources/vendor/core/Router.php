@@ -3,19 +3,19 @@
 namespace resources\vendor\core;
 
 class Router {
-	
+
 	/*
 		tablica maršrutov
 		@var
 	*/
 	protected static $routes = [];
-	
+
 	/*
 		tablica maršrut!
 		@var array
 	*/
 	protected static $route = [];
-	
+
 	/*
 		Dobavljaem maršrut v tablicu maršrutov!
 		@var array
@@ -35,14 +35,14 @@ class Router {
 
 	/*
 		vozvraščaet tekuščij maršrut ([cintroller, action, params])
-		
-		@return array 
+
+		@return array
 	*/
 	public static function getRoute() {
 		return self::$route;
 	}
 	/*
-	iščet URL v tablice maršrutov 
+	iščet URL v tablice maršrutov
 	$param string $url vhodjaščij URL
 	@return boolean
 	*/
@@ -57,7 +57,7 @@ class Router {
 					}
 				}
 				if(!isset($route['action'])) {
-					$route['action'] = 'index'; 
+					$route['action'] = 'index';
 				}
 				$route['controller'] = self::upperCamelCase($route['controller']);
 				self::$route = $route;
@@ -72,25 +72,24 @@ class Router {
 		//var_dump($url);
 		if(self::matchRoute($url)) {
 			//debug($url);
-			$controller = 'app\http\controllers\\' . self::$route['controller'] . "Controller";
+			$controller = 'app\Http\Controllers\\' . self::$route['controller'] . "Controller";
 			//debug(self::$route);
 			if(class_exists($controller)) {
-				// sozdajom "controller" dannogo class-a
-				$cObj = new $controller(self::$route);
-				$action = self::lowerCamelCase(self::$route['action']) . "Action";
-				//debug($action);
-				if(method_exists($cObj, $action)) {
-					// Esli takoj "method" suščestvuev, to my ego zapuskaem;
-					$cObj->$action();
-                    //debug($cObj);
-					$cObj->getView();
-                    
+						// sozdajom "controller" dannogo class-a
+						$cObj = new $controller(self::$route);
+						$action = self::lowerCamelCase(self::$route['action']) . "Action";
+						//debug($action);
+						if(method_exists($cObj, $action)) {
+							// Esli takoj "method" suščestvuev, to my ego zapuskaem;
+							$cObj->$action();
+		                    //debug($cObj);
+							$cObj->getView();
+						}else{
+							echo "Method <b>$controller::$action</b> ne najden";
+						}
 				}else{
-					echo "Method <b>$controller::$action</b> ne najden"; 
+					echo "Controller <b>$controller</b> ne najden";
 				}
-			}else{
-				echo "Controller <b>$controller</b> ne najden"; 
-			}
 		}else{
 			//debug($url);
 			http_response_code(404);
@@ -124,9 +123,9 @@ class Router {
 			// debug($params);
 			//	return '1';
 			//}
-			
+
 		}
-		
+
 		//debug($url);
 		return $url;
 	}
