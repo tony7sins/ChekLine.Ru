@@ -72,7 +72,7 @@ class Router {
 		//var_dump($url);
 		if(self::matchRoute($url)) {
 			//debug($url);
-			$controller = 'app\Http\Controllers\\' . self::$route['controller'] . "Controller";
+			$controller = self::lowerCamelCase('app\Http\Controllers\\' . self::$route['controller'] . "Controller");
 			//debug(self::$route);
 			if(class_exists($controller)) {
 						// sozdajom "controller" dannogo class-a
