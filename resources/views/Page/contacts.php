@@ -11,10 +11,11 @@ $pageDesc = "ждём Вас...";
     <div class="row">
       <div>
         <h1>Телефон</h1>
-        <p>+7 (495) 777-5522</p>
+        <p>+7 (499) 130-10-54</p>
       </div>
       	<h1>Электронная почта</h1>
-      	<p>rybchik@glavchek.ru</p>
+      	<p>makeev.o@mail.ru</p>
+        <i role="separator" class="divider"></i>
 			<div>
 				<h1>Адрес:</h1>
         <p>Москвоская Обл., г. Мытищи, ул.Ленина 1а, стр.7</p>
@@ -22,7 +23,7 @@ $pageDesc = "ждём Вас...";
 			<div>
 				<h1>Карта</h1>
         <div>
-        	
+
         </div>
       </div>
 			<div>
@@ -46,7 +47,7 @@ $pageDesc = "ждём Вас...";
   </div>
 </section>
 
-<div class="table-responsive">
+<!-- <div class="table-responsive">
 	<table class="table table-hover">
 		<caption>Сотрудники</caption>
 		<thead>
@@ -75,7 +76,7 @@ $pageDesc = "ждём Вас...";
 			</tr>
 		</tbody>
 	</table>
-</div>
+</div> -->
 
 <button class="btn btn-link" data-toggle="collapse" data-target="#person">Sotrudnik</button>
 <div class="collapse" id="person">

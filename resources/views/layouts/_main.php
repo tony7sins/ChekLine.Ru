@@ -15,65 +15,27 @@
       <!-- Bootstrap -->
       <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
       <!-- Custum CSS -->
-      <link rel="stylesheet" href="/assets/css/main.css">
-      <link rel="stylesheet" href="/assets/css/media.css" media="all and (max-width: 900px)" type="text/css">
+      <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+      <link rel="stylesheet" href="/assets/css/media.css" media="all and (max-width: 762px)" type="text/css">
       <!--load all styles -->
       <link href="/assets/css/all.css" rel="stylesheet">
   </head>
 
   <body>
     <header class="header" id="header" >
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-        <!-- Brand и toggle сгруппированы для лучшего отображения на мобильных дисплеях -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"><img alt="Logo" src="/assets/img/logo0.png"></a>
-          </div>
-          <!-- Навигационные ссылки, формы, и другой контент для переключения -->
-          <div class="collapse navbar-collapse" id="toggle-menu">
+        <!-- Menu -->
+        <?php require_once VIEW . "/layouts/_menu.php";?>
+    </header>
 
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active-link text-center">
-                  <a href="/page/about"><i class="fas fa-user-tie"></i> о нас</a>
-                </li>
-              <li class="active-link text-center">
-                  <a href="/page/factory"><i class="far fa-building"></i> продукция</a>
-                </li>
-              <li class="active-link text-center">
-                <a href="/page/contacts"><i class="fas fa-phone"></i> контакты</a>
-              </li>
-              <li class="active-link text-center">
+    <!-- Content, image and text -->
+    <?= $content ?>
 
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="active dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fas fa-home"></i> домой</a>
-                    <ul class="dropdown-menu">
-                      <li class="dropdown-heder text-center"><a href="/">на главную</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li class="text-center"><a href="/#newsletter_input"><i class="fas fa-envelope"></i> написать...</a></li>
-                      <li class="text-center"><a href="/#"><i class="fas fa-phone"></i> позвонить...</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-  </header>
+    <!-- Footer -->
+    <?php require_once VIEW . "/layouts/_footer.php";?>
 
-  <!-- Content, image and text -->
-  <?= $content ?>
-
-  <?php require_once VIEW . "/layouts/_footer.php";?>
   </body>
-        <!-- Optional JavaScript -->
+
+      <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <!--
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -12,15 +12,15 @@ font-family: 'Poiret One', cursive;
 }
 
 body {
-	/*
-	font-size: 15px;
-	line-height: 1.5;
-	*/
+	display: grid;
+	position: relative;
+	grid-template: 1fr;
+	top: 51px;
 	font: 15px/1.5;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	padding: 0;
 	margin: 0;
-	background-color: #fdfdfd;
+	background-color: #f4f4f4;
 	-webkit-font-smoothing: antialised;
 	-webkit-overflow-scrolling: touch;
 }
@@ -29,37 +29,117 @@ body {
 .container {
 	margin: auto;
 	overflow: hidden;
-  width: auto
-}
-
-ul, li {
-	display: block;
-	float: center;
-	/* Na vsjakij slučaj */
-	padding: 0;
-	margin: 0;
-}
-
-header,
-footer {
-	background: #35424a;
-	color: #ffffff;
-	text-transform: uppercase;
-	text-align: center;
+  width: auto;
 }
 
 header {
-	margin: 0 0px 15px;
-	width: 100;
-	min-height: 50px;
-	margin-bottom: 0px;
+	background: #35424a;
+	top: 0px;
+	width: 100%;
+	position: fixed;
+	/* top: 0; */
+	/* left: 0; */
+	z-index: 100;
+	/* border-bottom: 5px solid #f62459; */
+}
+
+
+#logo {
+	margin: -1px;
+	float: left;
+	width: 150px;
+	height: 50px;
+	background: url(/assets/img/logo0.png) no-repeat left;
+	background-size: contain;
+}
+
+#menu, #navbar-menu > ul > label,
+#navbar-menu [type="checkbox"] {
+	display: none;
+}
+
+.navbar-menu * {
+		margin: 0;
+		padding: 0;
+}
+.navbar-menu ul,
+.navbar-menu li {
+	list-style: none;
+}
+
+.navbar-menu > ul {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.navbar-menu > ul li a {
+	display: block;
+	width: 160px;
+	padding: 15px 10px 15px 15px;
+	font-size: 14px;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.5s ease;
+}
+
+.navbar-menu > ul li {
+	position: relative;
+	text-align: center;
+	border-right: 1px solid #fff;
+}
+
+.navbar-menu > ul > li > a i {
+	position: absolute;
+	top: 15px;
+	left: 12px;
+	font-size: 18px;
+}
+/* linija puntov menu NADO POPRAVIT' */
+#navbar-menu > ul > li:nth-child(3) > a {
+	border-left: 1px solid #fff;
+}
+
+.navbar-menu >ul li:last-child {
+	border-right: 1px solid #fff;
+}
+
+.navbar-menu li > a:hover {
+	background: #487df6;
+	color: #f62459;
+	box-shadow: 1px 5px 10px -5px #f62459;
+
+}
+
+/* vložennye spiski */
+.navbar-menu li ul {
+	position: absolute;
+	min-width: 150px;
+	display: none;
+	background-color: #35424a;
+}
+
+.navbar-menu li > ul li a {
+	padding: 10px;
+	text-decoration: none;
+	transition: all 0.5s ease;
+
+}
+
+.navbar-menu li:hover > ul {
+	display: block;
+	transition: all 0.5s ease;
 }
 
 footer,
 footer .text-muted {
+	text-align: center;
+	background: #35424a;
 	padding: 20px;
 	margin-top: 20px;
 	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 h1 {
@@ -76,132 +156,23 @@ img {
 	align-items: center;
 }
 
-a.navbar-brand img {
-	max-height: 45px;
-  margin-top: -12px;
-	background-color: #ffffff;
-	position: relative;
-}
-
-a,
-.navbar-inverse .navbar-nav>li>a,
-.dropdown-menu>li>a {
-	color: #ffffff;
-	text-decoration: none;
-	outline: 0;
-	-webkit-transition: all 1.5s ease;
-	-o-transition: all 1.5s ease;
-	transition: all 1.5s ease;
-}
-
-a:hover,
-a:focus,
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>li>a:focus,
-.navbar-inverse .navbar-nav>li>a:hover,
-.navbar-inverse .navbar-nav>.open>a:focus,
-.navbar-inverse .navbar-nav>.open>a:hover,
-.dropdown-menu>li>a:hover,
-.dropdown-menu>li>a:focus {
-	background-color: #487df6;
-	text-decoration: none;
-	outline: 0;
-	color: #ffffff;
-
-}
-
-.navbar {
-	font-weight: 100;
-	font-family: 'Open Sans', sans-serif;
-}
-
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-    background-color: #487df6;
-}
-
-.navbar-inverse .navbar-toggle {
-	border-radius: 0px;
-	border-color: #ffffff;
-}
-
-.dropdown-menu {
-	text-align: text-uppercase;
-	background-color: black;
-}
-
-.button_1 {
-	height: 26px;
-	background: #e8491d;
-	border: 0;
-	padding: 0px 15px 0px 15px;
-	margin: 0 15px 0px 0px;
-}
-
-.button_1:hover {
-	background-color: #487df6;
-}
-
-
-
-#toggle-menu {
-	padding-right: 28px;
-}
-
-
-/* main/index.php NewSletter */
-
-#newsletter {
-	padding: 15px;
-	color: #ffffff;
-	background: #35424a;
-}
-
-#newsletter > div {
-	display: block;
-	/* padding: 10px 10px 10px 10px;
-	margin: 10px 10px 10px 10px; */
-	position: relative;
-}
-
-#newsletter h1 {
-	font-size: 20px;
-	float: left;
-	display: block;
-	position: absolute;
-	margin: 15px 0px 0px 15px;
-}
-
-#newsletter form {
-	float: right;
-	margin-top: 15px;
-}
-
-#newsletter input[type="email"] {
-	/* padding: 4px 0 4px 4px;
-  margin: 0px 0 15px -275px; */
-	height: 25px;
-	width: 250px;
-	color: rebeccapurple;
-}
-
+/* tri bloka s tektom */
 #boxes {
-	margin: 15px 0 0 15px;
+	margin: 10px -10px 0px 25px;
 }
 
 #boxes .box {
 	float: left;
-	width: 30%;
+	width: 31%;
 	padding: 15px;
 	text-align: center;
-	margin: 0 3.333% 0 0;
+	margin: 0 1.5% 0 0;
+	max-height: 350px;
 }
 #boxes svg {
 	min-width: 80px;
 	font-size: 60px;
 }
-
-
 .box {
 	display: block;
 	margin: 0;
@@ -209,10 +180,48 @@ a:focus,
 	border-radius: 3px;
 	left: 10px;
 }
-
-#box__1,
-#box__3 {
+.box > div:nth-child(even) {
 	background-color: #ddd;
+}
+
+/* main/index.php NewSletter */
+.button_1 {
+	height: 26px;
+	background: #e8491d;
+	border: 0;
+	padding: 0px 15px 0px 15px;
+	margin: 0 15px 0px 0px;
+	transition: all 0.5s ease;
+}
+
+.button_1:hover {
+	background-color: #487df6;
+	box-shadow: 1px 5px 10px -5px #f62459;
+
+}
+
+#newsletter {
+	padding: 15px;
+	color: #fff;
+	background-color: #35424a;
+
+}
+
+#newsletter h1 {
+	font-size: 25px;
+	float: left;
+	width: auto;
+}
+
+#newsletter form {
+	float: right;
+	margin-top: 25px;
+	transition: all 0.5s easy;
+}
+#newsletter > div > input[type="email"] {
+	/* height: 25px;
+	width: 250px; */
+	color: rebeccapurple;
 }
 
 #gallery {
@@ -227,14 +236,14 @@ a:focus,
 
 #gallery .container .row {
 	margin-top: 10px;
-	text-align: center;
+	text-align: left;
 	/* border: 1px solid red; */
 	/* border-radius: 5px; */
 	/* width: auto; */
 	display: grid;
 	grid-gap: 3px;
-	grid-template: repeat(3, 150px) / repeat(3, 2fr);
-	grid-auto-rows: minmax(100px;auto);
+	grid-template-columns: repeat(3, 2fr);
+	grid-auto-rows: minmax(auto,150px);
 	grid-template-areas:
 		"gpic__1 gpic__1 gpic__2"
 		"gpic__1 gpic__1 gpic__2"
@@ -310,7 +319,7 @@ a:focus,
 }
 
 .gpic>h3{
-	border-radius: 15px;
+	border-radius: 5px;
 	margin: 0;
 	padding: 10px 0px 5px 0px;
 	width: 33%;
@@ -360,7 +369,7 @@ a:focus,
 }
 
 .row {
-	padding: 0 15px 0 15px;
+	padding: 0;
 }
 /* pageHeader */
 .pageHeader .row {
@@ -375,7 +384,7 @@ a:focus,
 .row h1,
 .row p {
 	/* background-color: rgba(0, 0, 0, 0.55); */
-	width: fit-content;
+	/* width: 100%; */
 	padding: 0 05px 0 05px;
 	display: block;
   /* float: right; */

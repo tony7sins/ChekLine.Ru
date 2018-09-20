@@ -8,31 +8,31 @@ $pageDesc = "Мы знаем всё о текущих потребностях �
 <?php require_once VIEW . "/layouts/_pageHeader.php";?>
 
 <section class="newsletter" id="newsletter">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <h1>Получить обратную связь</h1>
-      <form id="newsletter_form" class="" action="index.html" method="post">
-        <input id="newsletter_input"type="email" placeholder="Введите Ваш Email">
-        <button id="newsletter_buttom" type="submit" class="button_1">Вперед!</button>
-      </form>
+        <h1>Получить обратную связь</h1>
+        <form id="newsletter_form" class="newsletter_form" action="index.html" method="post">
+          <input id="newsletter_input" type="email" placeholder="Введите Ваш Email">
+          <button id="newsletter_buttom" type="submit" class="button_1">Вперед!</button>
+        </form>
+      </div>
     </div>
-  </div>
 </section>
 
 <section id="boxes" class="boxes">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 box" id="box__1">
+      <div class="box" id="box__1">
         <span class="fas fa-shopping-cart"></span>
         <h3>Сетевой и Крупный бизнес</h3>
         <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов</p>
       </div>
-      <div class="col-lg-4 box" id="box__2">
+      <div class="box" id="box__2">
         <span class="fas fa-shopping-basket"></span>
         <h3>Средние / малые компании</h3>
         <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов</p>
       </div>
-      <div class="col-lg-4 box" id="box__3">
+      <div class="box" id="box__3">
         <span class="fas fa-shopping-bag"></span>
         <h3>Индивидуальные поставки</h3>
         <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов</p>
