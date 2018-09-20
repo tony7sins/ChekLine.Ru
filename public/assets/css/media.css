@@ -9,7 +9,6 @@
 	color: #ffffff;
 	cursor: pointer;
 	position: relative;
-
 }
 #navbar-menu > ul > label > svg {
 	position: absolute;
@@ -106,7 +105,7 @@
 
 	#newsletter_buttom {
 		display: block;
-		width: 100%
+		width: 100%;
 	}
 
 	#boxes > div {
@@ -138,7 +137,7 @@
 
 	#gpic__4 > img {
     margin-top: 0;
-
+}
 	#gpic__1 > p {
 		font-size: 12px;
     line-height: 16px;
