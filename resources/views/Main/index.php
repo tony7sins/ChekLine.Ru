@@ -5,7 +5,22 @@ $pageHeader = "ООО \"Главчек\"";
 $pageDesc = "Мы знаем всё о текущих потребностях наших клиентов и наиболее актуальных тенденциях рынка термобумаги.";
 ?>
 
-<?php require_once VIEW . "/layouts/_pageHeader.php";?>
+<section id="mainShowcase">
+  <div class="container-fluid" style="">
+    <div class="raw" style="">
+      <p style="">Официальный сайт</p>
+      <div style="">
+        <h1>ЧекЛайн.рф</h1>
+        <h2>технологии</h2>
+        <!-- <img src="/assets/img/mainShowcase_2.jpg" alt="main showcase picture"> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="pageHeader" id="<?php echo $showcase; ?>">
+<?php //require_once VIEW . "/layouts/_pageHeader.php";?>
+</section> -->
 
 <section class="newsletter" id="newsletter">
   <div class="container-fluid">
