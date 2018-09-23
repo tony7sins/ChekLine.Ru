@@ -10,7 +10,7 @@ $pageDesc = "Мы знаем всё о текущих потребностях �
     <div class="raw" style="">
       <p style="">Официальный сайт</p>
       <div style="">
-        <h1>ЧекЛайн.рф</h1>
+        <h1>ЧекЛайн</h1>
         <h2>технологии</h2>
         <!-- <img src="/assets/img/mainShowcase_2.jpg" alt="main showcase picture"> -->
       </div>

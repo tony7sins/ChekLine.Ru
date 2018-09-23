@@ -155,7 +155,7 @@ header {
 			background: url(/assets/img/mainShowcase_2.jpg) no-repeat center;
 			background-size: cover;
 			display:block;
-			height:32em;
+			height:20em;
 			position:relative;
 			text-align: center;
 		}
@@ -178,7 +178,7 @@ header {
 				margin: 0 auto;
 				mix-blend-mode: multiply;
 				position: absolute;
-				top: 10em;
+				top: 3em;
 				right: 0;
 				left: 0;
 				width: 220px;
