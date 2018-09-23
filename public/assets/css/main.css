@@ -260,12 +260,12 @@ header {
 .button_1:hover {
 	background-color: #487df6;
 	box-shadow: 1px 5px 10px -5px #f62459;
-	border-top: solid 1px;
 }
 #newsletter {
 	padding: 15px;
 	color: #fff;
 	background-color: #35424a;
+	border-top: solid 1px;
 }
 	#newsletter h1 {
 		font-size: 25px;
