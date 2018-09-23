@@ -149,7 +149,7 @@ header {
 	#mainShowcase > div {
 		margin: 0;
 		padding: 0;
-		background-color: #ffffff;
+		background-color: #f62459;
 	}
 	#mainShowcase > div .raw {
 			background: url(/assets/img/mainShowcase_2.jpg) no-repeat center;
@@ -163,15 +163,16 @@ header {
 				margin: 0 auto;
 				display: block;
 				position: absolute;
-				top: 1em;
-				font-size: 20px;
+				top: 0em;
+				font-size: 16px;
+				font-weight: 100;
 				right: 0;
-				left: 0;
+				/* left: 0; */
 				width: 194px;
 
 			}
 			#mainShowcase > div > div > div {
-				background-color: #f62459;
+				background-color: #364249;
 				display: block;
 				font-size: 20px;
 				margin: 0 auto;
@@ -259,6 +260,7 @@ header {
 .button_1:hover {
 	background-color: #487df6;
 	box-shadow: 1px 5px 10px -5px #f62459;
+	border-top: solid 1px;
 }
 #newsletter {
 	padding: 15px;
