@@ -149,13 +149,13 @@ header {
 	#mainShowcase > div {
 		margin: 0;
 		padding: 0;
-		background-color: #f62459;
 	}
 	#mainShowcase > div .raw {
 			background: url(/assets/img/mainShowcase_2.jpg) no-repeat center;
+			/* background: url(/assets/img/mainShowcase_2.jpg) 80% 50% no-repeat; */
 			background-size: cover;
 			display:block;
-			height:20em;
+			height:26em;
 			position:relative;
 			text-align: center;
 		}
@@ -178,7 +178,7 @@ header {
 				margin: 0 auto;
 				mix-blend-mode: multiply;
 				position: absolute;
-				top: 3em;
+				top: 5em;
 				right: 0;
 				left: 0;
 				width: 220px;
@@ -229,7 +229,7 @@ header {
 	border-radius: 3px;
 	left: 10px;
 }
-	.box > div:nth-child(even) {
+	#boxes > div > div > div:nth-child(2n+1) {
 		background-color: #ddd;
 	}
 	#boxes {
