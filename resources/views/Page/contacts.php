@@ -7,39 +7,55 @@ $pageDesc = "ждём Вас...";
  require_once VIEW . "/layouts/_pageHeader.php";?>
 
 <section class="contacts" id="contacts">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div>
-        <h1>Телефон</h1>
-        <p>+7 (499) 130-10-54</p>
+      <div class="grid_elem" id="cont__tel">
+        <h3>Телефон</h3>
+        <h4>+7 (499) 130-10-54</h4>
       </div>
-      	<h1>Электронная почта</h1>
-      	<p>makeev.o@mail.ru</p>
+      <div class="grid_elem" id="cont__mail">
+      	<h3>Электронная почта</h3>
+      	<h4>makeev.o@mail.ru</h4>
         <i role="separator" class="divider"></i>
-			<div>
-				<h1>Адрес:</h1>
-        <p>Москвоская Обл., г. Мытищи, ул.Ленина 1а, стр.7</p>
       </div>
-			<div>
-				<h1>Карта</h1>
-        <div>
-
-        </div>
+			<div class="grid_elem" id="cont__adress">
+				<h3>Адрес</h3>
+        <h4>Москвоская Обл., г. Мытищи, ул.Ленина 1а, стр.7</h4>
       </div>
-			<div>
-				<h1>Реквизиты:</h1>
-				<p>
-					<b>Юридический адрес:</b>   180007, Псковская область, г.Псков, Рижский проспект, дом 16, кабинет <br>
-					<b>Почтовый адрес:</b>   180007, г.Псков , а/я 933 , тел.8(8112)56-44-96<br>
-					<b>ИНН:</b>   6027167745       КПП:   602701001<br>
-					<b>ОГРН:</b>   1166027050595<br>
-					<b>Банковские реквизиты:</b>   р/ч 40702810251000000668<br>
-					<b>ПСКОВСКОЕ ОТДЕЛЕНИЕ N 8630 ПАО СБЕРБАНК<b><br>
-					<b>кор.сч.</b>   30101810300000000602<br>
-					<b>БИК:</b>   045805602<br>
-					<b>ОКПО:</b>   24117480<br>
-					<b>ОКТМО:</b>   58701000001<br>
-					<b>E-mail:</b>   info@nwcert.ru<br>
+			<div class="grid_elem" id="cont__map">
+				<h3>Карта</h3>
+         <div id="map" style="width: auto; height: 400px"></div>
+      </div>
+			<div class="grid_elem" id="cont__reqCor">
+        <h3>Реквизиты организации</h3>
+        <p>
+          <i>Название: </i>
+          ООО «ЧекЛайн» <br>
+					<i>Юридический адрес: </i>
+          141013, г. Мытищи, ул. Угольная, дом № 6, помещение № 23 <br>
+					<!-- <i>Почтовый адрес: </i>
+          180007, г.Псков , а/я 933 , тел.8(8112)56-44-96 <br> -->
+					<i>ИНН: </i>
+          5029231970 <br>
+          <i>КПП: </i>
+          502901001 <br>
+					<i>ОГРН: </i>
+          1185029013465<br>
+          <i>ОКПО: </i>
+          31578307<br>
+        </p>
+      </div>
+      <div class="grid_elem" id="cont__reqBank">
+        <h3>Банковские реквизиты</h3>
+        <p>
+          <i>Расчетный счёт: </i>
+          40702810001090000083<br>
+          <i>БИК: </i>
+          044525685<br>
+          <i>Банк: </i>
+					ПАО «СДМ-банк»<br>
+					<i>Корреспондетский счёт: </i>
+          30101810845250000685<br>
 				</p>
       </div>
     </div>
@@ -76,8 +92,8 @@ $pageDesc = "ждём Вас...";
 		</tbody>
 	</table>
 </div> -->
-
+<!--
 <button class="btn btn-link" data-toggle="collapse" data-target="#person">Sotrudnik</button>
 <div class="collapse" id="person">
 		telefon
-</div>
+</div> -->

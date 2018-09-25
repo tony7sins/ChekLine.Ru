@@ -46,8 +46,11 @@
       <!-- на jQuery (необходим для Bootstrap - х JavaScript плагины) -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->
+      <!-- Yandex karta -->
+      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <!-- load local BootStrap styles -->
       <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-      <!-- load all styles -->
+      <!-- load all local styles -->
       <script src="/assets/js/all.js"></script>
-
+      <script src="/assets/js/yaMap.js" type="text/javascript"></script>
 </html>
