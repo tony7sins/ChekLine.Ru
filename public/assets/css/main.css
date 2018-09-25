@@ -419,6 +419,9 @@ header {
 						color: #fff;
 						font-family: 'Open Sans', sans-serif;
 					}
+					#cont__map {
+						border: solid 2px #35424a;
+					}
 					/* #contacts .row div:nth-child(2n+0) {
 						background: #fff;
 						border-radius: 5px; */
