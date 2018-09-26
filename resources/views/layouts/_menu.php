@@ -10,10 +10,10 @@
     <li>
       <a class ="active link" href="#"><i class="fas fa-home"></i> домой</a>
       <ul>
-        <li><a href="#">главная</a></li>
+        <li><a href="/">главная</a></li>
         <li role="separator" class="divider"></li>
-        <li><a href="#">позвонить</a></li>
-        <li><a href="#">написать</a></li>
+        <li><a href="tel: +74991391954">позвонить</a></li>
+        <li><a href="mailto: makeev.o@mail.ru">написать</a></li>
         <!-- <li><a href="#"></a></li> -->
       </ul>
     </li>
