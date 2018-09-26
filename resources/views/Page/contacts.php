@@ -11,11 +11,11 @@ $pageDesc = "ждём Вас...";
     <div class="row">
       <div class="grid_elem" id="cont__tel">
         <h3>Телефон</h3>
-        <h4>+7 (499) 130-10-54</h4>
+        <h4><a href="tel: +74991391954">+7 (499) 130-10-54</a></h4>
       </div>
       <div class="grid_elem" id="cont__mail">
       	<h3>Email</h3>
-      	<h4>makeev.o@mail.ru</h4>
+      	<h4><a href="mailto: makeev.o@mail.ru">makeev.o@mail.ru</a></h4>
       </div>
 			<div class="grid_elem" id="cont__adress">
 				<h3>Адрес</h3>

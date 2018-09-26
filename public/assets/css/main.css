@@ -467,6 +467,7 @@ header {
 						padding-left: 15px;
 						padding-right: 15px;
 						padding-bottom: 10px;
+						transition: all 3s ease;
 					}
 					#contacts .row div h3 {
 						color: #487df6;
@@ -486,6 +487,17 @@ header {
 								grid-area: block_2;
 								line-height: 28px;
 							}
-							#cont__reqCor span {
+							#cont__reqCor span,
+							#cont__reqBank p span {
 									font-weight: 800;
+								}
+								#contacts .container div.row > div a {
+									color: #fafafa;
+									transition: all .7s ease;
+								}
+
+								#contacts .container div.row > div a:hover {
+									text-decoration: none;
+									color: #f62459;
+
 								}
