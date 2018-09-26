@@ -6,7 +6,7 @@
 	padding: 15px 40px;
 	display: none;
 	text-transform: uppercase;
-	color: #ffffff;
+	color: #fafafa;
 	cursor: pointer;
 	position: relative;
 }
@@ -33,6 +33,7 @@
 		display: block;
 		position: absolute;
 		right: 0;
+		transition: all 0.5s ease;
 		/* height: 48px; */
 		/* z-index: 100; */
 	}
@@ -51,10 +52,11 @@
 	}
 
 	#navbar-menu input.toggleMenu:checked + label.toggleMenu {
-		background: #487df6;
+		background: #fafafa;
 		color: #f62459;
 		z-index: 100;
 		top: 0;
+
 	}
 
 	input.toggleMenu:checked + label ~ li {
@@ -171,6 +173,9 @@
 		}
 		#cont__reqCor > div:nth-child(3) {
 			display: block;
+		}
+		#cont__reqCor > div:nth-child(3) > div:nth-child(2) {
+			margin-bottom: 35px;
 		}
 }
 
