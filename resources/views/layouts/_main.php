@@ -3,7 +3,7 @@
   <head>
 
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- Выше 3 Мета-теги ** должны прийти в первую очередь в голове; любой другой руководитель контент *после* эти теги -->
       <!-- Opisanije dlja piskovikov-->
@@ -11,12 +11,12 @@
       <meta name="keywords" content="Pdoizvostvo i prodaža kassovoj bumagi. Nado dobavit' opisnie">
       <meta name="author" content="t7s">
       <!-- Jaklyk vkladki -->
-      <title>ГлавЧек | <?= $title ?></title>
+      <title><?= $title; ?> | <?= $pageHeader; ?></title>
       <!-- Bootstrap -->
       <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
       <!-- Custum CSS -->
       <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
-      <link rel="stylesheet" href="/assets/css/media.css" media="all and (max-width: 762px)" type="text/css">
+      <link rel="stylesheet" href="/assets/css/media.css" media="all and (max-width: 768px)" type="text/css">
       <!--load all styles -->
       <link href="/assets/css/all.css" rel="stylesheet">
   </head>

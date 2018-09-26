@@ -1,10 +1,11 @@
 <?php
-$title = "наши контакты";
+$title = "ГлавЧек";
 $showcase = "main";
-$pageHeader = "Связь с Нами";
-$pageDesc = "ждём Вас...";
+$pageHeader = "Контакты";
+$pageDesc = "Свяжитесь с нами...";
+?>
 
- require_once VIEW . "/layouts/_pageHeader.php";?>
+<?php require_once VIEW . "/layouts/_pageHeader.php";?>
 
 <section class="contacts" id="contacts">
   <div class="container">
@@ -59,7 +60,7 @@ $pageDesc = "ждём Вас...";
           044525685<br>
           <span>Банк: </span>
 					ПАО «СДМ-банк»<br>
-					<span>Корреспондетский счёт: </span>
+					<span>Корреспондентский счёт: </span>
           30101810845250000685<br>
 				</p>
       </div>
