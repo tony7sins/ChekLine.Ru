@@ -493,7 +493,8 @@ header {
 								}
 								#contacts .container div.row > div a {
 									color: #fafafa;
-									transition: all .7s ease;
+									transition: all .5s ease;
+									text-decoration: none;
 								}
 
 								#contacts .container div.row > div a:hover {
