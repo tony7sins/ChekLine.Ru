@@ -469,7 +469,7 @@ header {
 						padding-left: 15px;
 						padding-right: 15px;
 						padding-bottom: 10px;
-						display: inline;
+						/* display: inline-block; */
 					}
 					#contacts .row div h3 {
 						color: #487df6;
