@@ -154,6 +154,27 @@
 		#cont__reqCor > div:nth-child(3) > div:nth-child(2) {
 			margin-bottom: 35px;
 		}
+	#skewedBox {
+		margin-bottom: 0em;
+	}
+		#skewedBox .wrap .row div:nth-child(1) {
+			margin-bottom: 100px;
+			min-height: 40em;
+		}
+		#skewedBox .wrap .row div:nth-child(2) {
+			margin-top: -20em;
+			/* margin-bottom: -20px; */
+		}
+		#skewedBox .wrap .row div:nth-child(2) {
+			min-height: 40em;
+			}
+			#skewedBox .wrap .row div:nth-child(2) p {
+				color: #000;
+				padding-right: 10%;
+			}
+		#skewedBox .wrap .row div:nth-child(3) {
+			min-height: 46em;
+			}
 }
 @media all and (min-width : 420px) {
 	#contacts .container .row {
@@ -170,6 +191,22 @@
 			"gblock__5 gblock__5"
 			"gblock__6 gblock__6";
 	}
+#skewedBox {
+	margin-bottom: 0em;
+}
+	#skewedBox .wrap .row div:nth-child(1) {
+		min-height: 35em;
+		}
+		#skewedBox .wrap .row div:nth-child(2) p {
+			color: #000;
+			padding-right: 35%;
+		}
+	#skewedBox .wrap .row div:nth-child(3) {
+		min-height: 35em;
+		}
+		#skewedBox .wrap .row div:nth-child(3) p{
+			padding-left: 15%;
+			}
 }
 
 

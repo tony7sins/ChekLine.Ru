@@ -1,5 +1,5 @@
-<section>
-  <footer class="footer" id="footer">
+<section class="footer">
+  <footer id="footer">
     <div class="container" name="footer">
       <!-- <i class="far fa-hand-point-down"></i>
       <span class="text-muted"><b>Svjažites' s nami</b>lubym udobnym sposobom</span><br>

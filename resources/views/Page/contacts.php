@@ -20,11 +20,11 @@ $pageDesc = "Свяжитесь с нами...";
       </div>
 			<div class="grid_elem" id="cont__adress">
 				<h3>Адрес</h3>
-        <h4>Московская Обл., г. Мытищи, ул.Ленина 1а, стр.7</h4>
+        <h4>г. Мытищи, ул. Угольная, дом № 6, помещение № 23</h4>
       </div>
 			<div class="grid_elem" id="cont__map">
 				<h3>Карта</h3>
-         <div id="map" style="width: auto; height: 400px"></div>
+         <div id="map" class="myMap" style="width: auto; height: 400px"></div>
       </div>
 			<div class="grid_elem" id="cont__reqCor">
         <h3>Реквизиты организации</h3>

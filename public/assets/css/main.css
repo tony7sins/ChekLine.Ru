@@ -14,7 +14,7 @@ font-family: 'Poiret One', cursive;
 body {
 	display: grid;
 	position: relative;
-	grid-template: 1fr;
+	grid-template-columns: 1fr;
 	top: 51px;
 	font: 15px/1.5;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -52,24 +52,27 @@ img {
 			display: block;
 		  /* float: right; */
 		}
+.footer {
+		z-index: 9000;
+}
 footer,
 footer .text-muted {
-			font-family: 'Poiret One', cursive;
-			font-weight: 400;
-			color: #fafafa;
-			background: #35424a;
-			padding: 20px;
-			margin-top: 20px;
-			text-align: center;
-			text-decoration: none;
-			/* text-transform: uppercase; */
+	font-family: 'Poiret One', cursive;
+	font-weight: 400;
+	color: #fafafa;
+	background: #35424a;
+	padding: 20px;
+	margin-top: 2px;
+	text-align: center;
+	text-decoration: none;
+	/* text-transform: uppercase; */
 }
 header {
 	background: #35424a;
 	top: 0px;
 	width: 100%;
 	position: fixed; /* top: 0; */ /* left: 0; */
-	z-index: 100; /* border-bottom: 5px solid #f62459; */
+	z-index: 9000; /* border-bottom: 5px solid #f62459; */
 	}
 	#logo {
 		margin: -1px;
@@ -208,6 +211,7 @@ header {
 	background: url(../img/showcase.jpg) no-repeat center;
 	background-size: cover;
 	color: #ffffff;
+	z-index: 8000;
 } /* peremennaja pri obraščenii k stranice */
 	.pageHeader .row {
 		margin: 0;
@@ -361,7 +365,7 @@ header {
 						left: 33%;
 						top: 0px;
 						opacity: 1;
-						z-index: 1;
+						z-index: 1000;
 						text-align: center;
 						transition: all .5s;
 					}
@@ -390,6 +394,7 @@ header {
 							margin-top: -25%;
 							height: auto;
 						}
+/* Contans Page */
 	#contacts {
 		margin: 0px 20px 0 25px;
 		overflow: hidden;
@@ -503,3 +508,101 @@ header {
 									color: #f62459;
 
 								}
+								#map__span {
+									color: red;
+								}
+/* About Page */
+	#skewedBox {
+		margin-top: -115px;
+		margin-bottom: -10%;
+		z-index: 5000;
+		overflow: hidden;
+	}
+		#skewedBox .wrap .row {
+			position: relative;
+		}
+			#skewedBox .wrap .row h1,
+			#skewedBox .wrap .row p {
+				padding: 0 15px 0 15px;
+				position: relative;
+			}
+			#skewedBox .wrap .row h1 {
+
+			}
+			#skewedBox .wrap .row p {
+				font-weight: 100;
+				text-align: justify;
+			}
+				#skewedBox .wrap .row div {
+					width: 100%;
+					position: relative;
+					padding-top: 1.5em;
+					/* display: block; */
+					/* justify-content: flex-end; */
+				}
+				#skewedBox .wrap .row div:nth-child(1) {
+					background: #000;
+					transform: skew(0deg,+10deg);
+					/* padding-top: 35px; */
+					/* margin-bottom: 3em; */
+					min-height: 28em;
+					z-index: 5010;
+				}
+					#skewedBox .wrap .row div:nth-child(1) h1,
+					#skewedBox .wrap .row div:nth-child(1) p {
+						transform: skew(0deg,-10deg);
+						padding-right: 5%;
+					}
+					#skewedBox .wrap .row div:nth-child(1) h1{
+						color: #487df6;
+						margin-top:3em;
+						text-align: right;
+					}
+					#skewedBox .wrap .row div:nth-child(1) p {
+						color: #fff;
+						padding-left: 15%;
+					}
+				#skewedBox .wrap .row div:nth-child(2) {
+					background: #edff57;
+					/* transform: skew(0deg,-10deg); */
+					padding: 135px 0 135px 0;
+					margin-top: -15em;
+					margin-bottom: -20px;
+					z-index: 5008;
+				}
+					#skewedBox .wrap .row div:nth-child(2) h1,
+					#skewedBox .wrap .row div:nth-child(2) p {
+						padding-left: 5%;
+					}
+					#skewedBox .wrap .row div:nth-child(2) h1 {
+						color: #487df6;
+						padding-top: 15px;
+					}
+					#skewedBox .wrap .row div:nth-child(2) p {
+						color: #000;
+						padding-right: 40%;
+					}
+				#skewedBox .wrap .row div:nth-child(3) {
+					background: #fff;
+					margin-top: -150px;
+					margin-bottom: -5em;
+					min-height: 30em;
+					/* text-align: right; */
+					transform: skew(0deg,-10deg);
+					z-index: 5009;
+				}
+				#skewedBox .wrap .row div:nth-child(3) h1,
+				#skewedBox .wrap .row div:nth-child(3) p {
+					padding-right: 5%;
+
+					transform: skew(0deg,10deg);
+
+				}
+					#skewedBox .wrap .row div:nth-child(3) h1 {
+						color: #487df6;
+						text-align: right;
+					}
+					#skewedBox .wrap .row div:nth-child(3) p {
+						color: #35424a;
+						padding-left: 20%;
+					}

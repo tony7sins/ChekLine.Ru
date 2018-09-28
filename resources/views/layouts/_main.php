@@ -52,5 +52,7 @@
       <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
       <!-- load all local styles -->
       <script src="/assets/js/all.js"></script>
-      <script src="/assets/js/yaMap.js" type="text/javascript"></script>
+      <!-- load all yMaps js -->
+      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <script src="/assets/js/yMaps.js" type="text/javascript"></script>
 </html>
