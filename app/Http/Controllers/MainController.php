@@ -20,7 +20,7 @@ class MainController extends AppController {
 		//var_dump($res);
 
         //$this->layout = '_main';
-		$title = "ГлавЧек";
+		$title = "ЧекЛайн";
 		$meta = "чеклайн.рф";
 		$this->set(compact('title', 'meta'));
 

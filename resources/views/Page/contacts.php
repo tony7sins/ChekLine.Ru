@@ -1,5 +1,5 @@
 <?php
-$title = "ГлавЧек";
+$title = "ЧекЛайн";
 $showcase = "main";
 $pageHeader = "Контакты";
 $pageDesc = "Свяжитесь с нами...";
@@ -12,7 +12,7 @@ $pageDesc = "Свяжитесь с нами...";
     <div class="row">
       <div class="grid_elem" id="cont__tel">
         <h3>Телефон</h3>
-        <h4><a href="tel: +74991391954">+7 (499) 130-10-54</a></h4>
+        <h4><a href="tel: +74955091243">+7(495)509-12-43</a></h4>
       </div>
       <div class="grid_elem" id="cont__mail">
       	<h3>Email</h3>

@@ -36,13 +36,17 @@ img {
 	max-width: 100%;
 	align-items: center;
 }
+
 .container {
 	margin: auto;
 	overflow: hidden;
   width: auto;
+	margin: 0;
+	padding: 0;
 }
 	.row {
 		padding: 0;
+		margin: 0;
 	}
 		.row h1,
 		.row p {
@@ -71,29 +75,70 @@ header {
 	background: #35424a;
 	top: 0px;
 	width: 100%;
-	position: fixed; /* top: 0; */ /* left: 0; */
-	z-index: 9000; /* border-bottom: 5px solid #f62459; */
+	position: fixed;
+	min-height: 50px;
+	z-index: 9100; /* border-bottom: 5px solid #f62459; */
 	}
 	#logo {
-		margin: -1px;
-		float: left;
-		width: 150px;
-		height: 50px;
-		background: url(/assets/img/logo0.png) no-repeat left;
-		background-size: contain;
+		/* display: inline; */
+		/* position: absolute; */
+		/* margin-top: 15px; */
+		/* justify-content: center; */
+		/* float: left; */
+		width: 250px;
+		/* height: 50px; */
+		/* background: url(/assets/img/logo0.png) no-repeat left;
+		background-size: contain; */
+		/* z-index: 9011; */
 	}
+	#logo__link {
+		position: absolute;
+		/* display: inline-flex; */
+	}
+	#logo__link .logo {
+		display: inline-flex;
+		/* color: #fff; */
+		height: 46px;
+		position: relative;
+		margin-left: 15px;
+		color:#fafafa;
+		margin-top: 2px;
+
+		}
+		.logo>:nth-child(1) {
+			display: none;
+			border: 1px solid;
+			/* height: 15px; */
+			padding: 5px;
+			transition: all 0.5s ease;
+		}
+		.logo>:nth-child(2){
+			display: flex;
+			padding-top: 9px;
+			font-size: 15px;
+			font-weight: 100;
+			/* width: 150px; */
+			transition: all 0.5s ease;
+			}
+			#logo__link .logo h1:hover {
+				background-color: #fafafa;
+				color: #487df6;
+				border-color: #487df6;
+				box-shadow: 1px 5px 10px -5px #487df6;
+				}
+			#logo__link .logo p:hover {
+				color: #f62459;
+				box-shadow: 5px solid #35424a;
+				text-decoration: none;
+				}
+
 	#menu {
 		display: none;
 	}
 		#navbar-menu [type="checkbox"] {
-				display: none;
+			display: none;
 		}
-			#navbar-menu > ul > label {
-				display: none;
-			}
-			#navbar-menu > ul > li:nth-child(3) > a {
-				border-left: 1px solid #fafafa;
-			}/* linija punktov menu NADO POPRAVIT' */
+
 		.navbar-menu * {
 			margin: 0;
 			padding: 0;
@@ -106,30 +151,42 @@ header {
 			display: flex;
 			justify-content: flex-end;
 		}
-		.navbar-menu > ul li {
-			position: relative;
-			text-align: center;
-			border-right: 1px solid #fafafa;
-		}
-		.navbar-menu > ul li:last-child {
-			border-right: 1px solid #fafafa;
-		}
-			.navbar-menu > ul li a {
-					display: block;
-					width: 160px;
-					padding: 15px 10px 15px 15px;
-					font-size: 14px;
-					color: #fafafa;
-					text-decoration: none;
-					text-transform: uppercase;
-					transition: all 0.5s ease;
+			#navbar-menu > ul > label {
+				display: none;
 			}
-				.navbar-menu > ul > li > a i {
-					position: absolute;
-					top: 15px;
-					left: 12px;
-					font-size: 18px;
+			#navbar-menu label.toggleMenu:hover {
+				background-color: #fafafa;
+				color: #487df6;
+				border-color: #487df6;
+				box-shadow: 1px 5px 10px -5px #487df6;
+			}
+			.navbar-menu > ul li {
+				position: relative;
+				text-align: center;
+				border-right: 1px solid #fafafa;
+			}
+			.navbar-menu > ul li:last-child {
+				border-right: 1px solid #fafafa;
+			}
+				#navbar-menu > ul > li:nth-child(3) > a {
+					border-left: 1px solid #fafafa;
+				}/* linija punktov menu NADO POPRAVIT' */
+				.navbar-menu > ul li a {
+						display: block;
+						width: 160px;
+						padding: 15px 10px 15px 15px;
+						font-size: 14px;
+						color: #fafafa;
+						text-decoration: none;
+						text-transform: uppercase;
+						transition: all 0.5s ease;
 				}
+					.navbar-menu > ul > li > a i {
+						position: absolute;
+						top: 15px;
+						left: 12px;
+						font-size: 18px;
+					}
 						.navbar-menu li ul { /* vložennye spiski */
 							position: absolute;
 							min-width: 150px;
@@ -202,8 +259,6 @@ header {
 			    padding: 5px 0px 5px 0px;
 			    letter-spacing: 3px;
 			    border-top: solid 2px;
-
-
 				}
 
 /* pageHeader ShowCase */
@@ -239,7 +294,7 @@ header {
 		background-color: #ddd;
 	}
 	#boxes {
-		margin: 10px -10px 0px 25px;
+		padding: 15px 0px 7px 25px;
 	}
 		#boxes .box {
 			float: left;
@@ -594,7 +649,6 @@ header {
 				#skewedBox .wrap .row div:nth-child(3) h1,
 				#skewedBox .wrap .row div:nth-child(3) p {
 					padding-right: 5%;
-
 					transform: skew(0deg,10deg);
 
 				}

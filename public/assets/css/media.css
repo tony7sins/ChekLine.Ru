@@ -2,7 +2,7 @@
 		display: none;
 	}
 		.navbar-menu li:hover > ul {
-			position: relative;
+			/* position: relative; */
 		}
 			#navbar-menu label.toggleMenu {
 				padding: 15px 40px;
@@ -18,10 +18,20 @@
 				right: 90px;
 				font-size: 21px;
 				/* border: 1px solid #fff; */
-				z-index: 100px;
+				z-index: 9210;
 			}
 /* Medium Devices, Wide Screens */
 @media screen and (max-width: 768px) {
+footer {
+	margin-top: 3px;
+}
+	.logo > :nth-child(1) {
+		display: flex;
+	}
+	.logo>:nth-child(2){
+		display: none;
+		/* font-size: 10px; */
+	}
 	.toggleMenu {
 		display: none;
 	}
@@ -36,17 +46,19 @@
 		position: absolute;
 		right: 0;
 		transition: all 0.5s ease;
-		/* height: 48px; */
-		/* z-index: 100; */
 	}
 		#navbar-menu input.toggleMenu:checked + label.toggleMenu {
 			background: #fafafa;
 			color: #f62459;
-			z-index: 100;
+			z-index: 9999;
 			top: 0;
+			box-shadow: 1px 5px 10px -5px #487df6;
 		}
 			input.toggleMenu:checked + label ~ li {
 				display: block;
+				position: relative;
+			}
+			.navbar-menu li ul { /* vložennye spiski */
 				position: relative;
 			}
 	.navbar-menu > ul {
@@ -55,7 +67,7 @@
 		.navbar-menu > ul li a {
 			width: auto;
 			margin-top: 3px;
-			z-index: 1;
+			z-index: 9555;
 		}
 		#navbar-menu > ul > li:nth-child(3) > a {
 			margin-top: 50px;
@@ -68,9 +80,6 @@
 				#navbar-menu > ul > li > ul > li > a {
 					font-size: 12px;
 				}
-	footer {
-		margin-top: 3px;
-	}
 	#newsletter_buttom {
 		display: block;
 		width: 100%;
@@ -114,7 +123,7 @@
 			"gpic__3"
 			"gpic__4"
 		}
-				#gpic__4 > img {
+			#gpic__4 > img {
 			    margin-top: 0;
 			}
 			#gpic__1 > p {
@@ -171,12 +180,13 @@
 			#skewedBox .wrap .row div:nth-child(2) p {
 				color: #000;
 				padding-right: 10%;
+				/* font-weight: 800; */
 			}
 		#skewedBox .wrap .row div:nth-child(3) {
 			min-height: 46em;
 			}
 }
-@media all and (min-width : 420px) {
+@media all and (min-width : 380px) {
 	#contacts .container .row {
 		/* margin-top: 10px;
 		text-align: left;
@@ -195,21 +205,20 @@
 	margin-bottom: 0em;
 }
 	#skewedBox .wrap .row div:nth-child(1) {
-		min-height: 35em;
+		min-height: 37em;
 		}
 		#skewedBox .wrap .row div:nth-child(2) p {
 			color: #000;
-			padding-right: 35%;
+			padding-right: 25%;
 		}
 	#skewedBox .wrap .row div:nth-child(3) {
-		min-height: 35em;
+		min-height: 32em;
 		}
 		#skewedBox .wrap .row div:nth-child(3) p{
-			padding-left: 15%;
+			padding-left: 5%;
+			font-size: 14px;
 			}
 }
-
-
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-wight : 1200px) {
