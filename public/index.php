@@ -1,6 +1,7 @@
 <?php
 
-
+// testovyj prerenos etoj stročki vyše erroe_reporting
+use resources\vendor\core\Router;
 // Obrabotčik ošibok!
 // podkjučaem prostranstvo imjon;
 error_reporting(E_ALL | E_STRICT);
@@ -8,7 +9,7 @@ ini_set('display_errors', 1);
 
 //parse_str($_SERVER['QUERY_STRING'], $_GET);
 
-use resources\vendor\core\Router;
+
 
 
 //$_SERVER['QUERY_STRING'] / REQUEST_URI

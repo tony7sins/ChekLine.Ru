@@ -1,27 +1,51 @@
-Ошибка создания пользователя DNSManager (#1). Пожалуйста, свяжитесь с технической поддержкой.
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
 
-Заказ выполнен. VDS сервер удачно создан.
+    root /var/www/html/site/public;
+    index index.php index.html index.htm index.nginx-debian.html;
 
-Номер заказа: #170519
-ОС: ISPsystem__Ubuntu-16.04-amd64
-IP сервера: 185.179.188.153
+    server_name 185.179.188.153;
 
-Панель управления: https://v6.webhost1.ru:1500/
-Пользователь: t7s
-Пароль: d1f07998X1
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
 
-Вход в панель управления DNS: https://dns24.online:1500/dnsmgr
-Пользователь: t7s
-Пароль: d1f07998X1
-Неймсерверы:
-one.dns24.online
-two.dns24.online
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        # Ne znau čto za nastrojki - našjol na GitHub
+        # include /etc/nginx/fastcgi_params;
+        # fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        # fastcgi_index index.php;
+        # fastcgi_param SCRIPT_FILENAME /vagrant/public$fastcgi_script_name;
+    }
 
-Предоставляем место под резервное копирование, которое вы должны настроить и осуществлять самостоятельно. Доступ к FTP и панели управления для резервного копирования:
-Вход в панель управления: https://f1.webhost1.ru
-FTP сервер: f1.webhost1.ru
-Порт: 21
-Пользователь: t7s
-Пароль: d1f07998X1
+    # Phpmyadmin Configurations
+    location /phpmyadmin {
+       root /usr/share/;
+       index index.php index.html index.htm;
+       location ~ ^/phpmyadmin/(.+\.php)$ {
+               try_files $uri =404;
+               root /usr/share/;
+               #fastcgi_pass 127.0.0.1:9000;
+               #fastcgi_param HTTPS on; # <-- add this line
+               fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+               fastcgi_index index.php;
+               fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+               include fastcgi_params;
+       }
+       location ~* ^/phpmyadmin/(.+\.(jpg|jpeg|gif|css|png|js|ico|html|xml|txt))$ {
+               root /usr/share/;
+       }
+   }
 
-Запишите эти данные, копия данных с описанием выслана на ваш email.
+   # Dealing with the uppercased letters
+   location /phpMyAdmin {
+       rewrite ^/* /phpmyadmin last;
+   }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}
