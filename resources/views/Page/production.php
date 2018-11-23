@@ -14,8 +14,13 @@ $pageDesc = "Как всё работает...";
 <style type="text/css">
 
 :root {
---color-primary: #ffffff;
---color-second: pink;
+--color-primary: #d3d8fb24;
+--color-white: white;
+--color-second: #5371c1;
+--gradient-dark: linear-gradient(45deg, rgba(0,0,0,0.20), rgba(0,0,0,0));
+--gradient-ligth: linear-gradient(-10deg, rgba(255,255,255,0), rgba(255,255,255,0.20));
+--block-height: 38px;
+
 }
   body > section > div > div.culculator {
     margin-top: 23px;
@@ -35,7 +40,8 @@ $pageDesc = "Как всё работает...";
         display: flex;
         justify-content: space-between;
         align-content: center;
-
+        background-color: var(--color-primary);
+        background-image: var(--gradient-dark);
        /* flex-direction: row-reverse; */
 
        border-radius: 5px;
@@ -43,9 +49,13 @@ $pageDesc = "Как всё работает...";
       }
 
         .info-block:nth-child(n+1){
-          background: var(--color-primary);
-          position: inherit;
+
+
           /* align-content: center; */
+          height: 38px;
+          /* position: inherit; */
+
+
           min-height: 34px;
           min-width: 280px;
           /* flex-shrink: 1; */
@@ -53,28 +63,43 @@ $pageDesc = "Как всё работает...";
 
         .info-block > div.icon {
           align-self: center;
-          margin: 5px 5px 0 10px;
+          height: 25px;
+          width: 25px;
+          margin-left: 13px;
+          fill: var(--color-second);
         }
+
         .info-block input{
           width: 80px;
           text-align: center;
         }
 
         .info-block output {
-          background-color: var(--color-second);
+
+          background-color: var(--color-secondary);
+          color: var(--color-second);
           min-width: 100px;
           text-align: center;
         }
 
-        /* body > section > div > div > div.col-sm-3.costCulc > div.form-group.widthCulc > div:nth-child(1) > h4, */
-        .info-block > h4 {
-          margin: 5px auto 5px 15px;
+        .info-block > h4{
+          margin: 5px auto 0px 15px;
+          align-self: left;
+          width: 100%;
+          font-size: 16px;
+          color: var(--color-second);
+          /* shrink: 1; */
+          height: calc(var(--block-height)-5px);
+          /* background-image: var(--gradient-ligth); */
 
         }
         .btn-group button {
           flex-grow: 1;
+          background-color: #fff0;
+          border-color: var(--color-white);
           /* flex-shrink: 1; */
         }
+
 
 @media screen and (max-width: 600px) {
   body > section > div > div.culculator {
@@ -100,7 +125,10 @@ $pageDesc = "Как всё работает...";
           <div class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 24v-8h-24v8h24zm-22-6h2v2h1v-2h2v3h1v-3h2v2h1v-2h2v2h1v-2h2v3h1v-3h2v2h1v-2h2v4h-20v-4zm14-10h-8v4l-8-6 8-6v4h8v-4l8 6-8 6v-4z"/></svg>
           </div>
-          <h4>Ширина ленты, mm</h4>
+
+            <h4>Ширина ленты, мм</h4>
+
+
           <input id="widthInput" type="number" min="1" max="100" step=".5" value="57">
         </div>
         <!-- width-buttons -->
@@ -116,7 +144,7 @@ $pageDesc = "Как всё работает...";
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0h-8v24h8v-24zm-6 22v-2h2v-1h-2v-2h3v-1h-3v-2h2v-1h-2v-2h2v-1h-2v-2h3v-1h-3v-2h2v-1h-2v-2h4v20h-4zm-10-14v8h4l-6 8-6-8h4v-8h-4l6-8 6 8h-4z"/></svg>
           </div>
-          <h4>Длина ленты, m</h4>
+          <h4>Длина ленты, м</h4>
           <input type="number" min="1" max="100" step=".5" value="17">
         </div>
         <!-- length-buttons -->
@@ -130,11 +158,14 @@ $pageDesc = "Как всё работает...";
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 8c-2.762 0-5 2.239-5 5v2h10v-2c0-2.761-2.238-5-5-5zm-3 5c0-1.654 1.346-3 3-3s3 1.346 3 3h-6zm13 0c0-5.523-4.477-10-10-10s-10 4.477-10 10h-2v8h24v-8h-2zm0 6h-2v-2h-1v2h-2v-3h-1v3h-2v-2h-1v2h-2v-2h-1v2h-2v-3h-1v3h-2v-2h-1v2h-2v-4h2v-2c0-4.418 3.582-8 8-8s8 3.582 8 8v2h2v4z"/></svg>
           </div>
-          <h4>Внутренний радуис (втулка), mm</h4>
+          <h4>Внутренний радуис (втулка), мм</h4>
           <output>11</output>
         </div>
-        <div>
-          <input class="info-block" type="range" min="11" max="25" step="1" value="11">
+        <div class="info-block radius">
+          <!-- <input class="info-block" type="range" min="11" max="25" step="1" value="11"> -->
+          <laber for="r12"><input id="r12" name="radius" type="radio" value="12">12 mm</laber>
+          <laber for="r18"><input id="r18" name="radius" type="radio" value="18">18 mm</laber>
+          <laber for="r25"><input id="r25" name="radius" type="radio" value="25">25 mm</laber>
         </div>
       </div>
 
@@ -457,11 +488,12 @@ $(document).ready(function() {
   forOnStock();
   console.log(`равно ${paperWidth} : ${paperLength}`);
 
-  $(`.sleeveCulc input[type="range"]`)
+  $(`.sleeveCulc input`)
     .on('input', function(e) {
 
       let r = $(this).val();
       $('.sleeveCulc').find("output").val(r);
+      // $('.sleeveCulc').find("output").text(`${r} mm`);
       console.log(`равно ${paperWidth} : ${paperLength}`);
       calcTotal();
     }
