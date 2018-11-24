@@ -6,6 +6,17 @@ font-family: 'Poiret One', cursive;
 */
 @charset "UTF-8";
 
+:root {
+--color-primary: #d3d8fb24;
+--color-second: #f62459;
+--color-cold: ;
+--color-warning: #f62459;
+--gradient-dark: linear-gradient(45deg, rgba(0,0,0,0.20), rgba(0,0,0,0));
+--gradient-ligth: linear-gradient(-10deg, rgba(255,255,255,0), rgba(255,255,255,0.20));
+--block-height: 38px;
+--font-sex: 'Poiret One', cursive;
+}
+
 /* Global */
 * {
 	margin: 0;

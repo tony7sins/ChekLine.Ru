@@ -15,19 +15,19 @@ $pageDesc = "Как всё работает...";
 
 :root {
 --color-primary: #d3d8fb24;
---color-white: white;
---color-second: #5371c1;
+--color-second: #35424a;
+--color-cold: whitesmoke;
+--color-warning: #f62459;
 --gradient-dark: linear-gradient(45deg, rgba(0,0,0,0.20), rgba(0,0,0,0));
 --gradient-ligth: linear-gradient(-10deg, rgba(255,255,255,0), rgba(255,255,255,0.20));
 --block-height: 38px;
-
+--font-sex: 'Poiret One', cursive;
 }
   body > section > div > div.culculator {
     margin-top: 23px;
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Poiret One', cursive;
-
+    font-family: var(--font-sex);
   }
     body > section > div > div.culculator > div {
 
@@ -45,7 +45,9 @@ $pageDesc = "Как всё работает...";
         background-image: var(--gradient-dark);
         /* flex-direction: row-reverse; */
         border-radius: 5px;
-        margin-bottom: 20px;
+
+        border: var(--color-cold) solid 0.5px;
+        margin-bottom: 10px;
       }
 
         .info-block:nth-child(n+1){
@@ -108,7 +110,7 @@ $pageDesc = "Как всё работает...";
       .btn-group button {
         flex-grow: 1;
         background-color: #fff0;
-        border-color: var(--color-white);
+        border: var(--color-cold) solid 0.5px;
         /* flex-shrink: 1; */
       }
 
