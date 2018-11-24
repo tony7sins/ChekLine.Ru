@@ -20,7 +20,7 @@ $pageDesc = "Как всё работает...";
 --color-warning: #f62459;
 --gradient-dark: linear-gradient(45deg, rgba(0,0,0,0.20), rgba(0,0,0,0));
 --gradient-ligth: linear-gradient(-10deg, rgba(255,255,255,0), rgba(255,255,255,0.20));
---block-height: 38px;
+--block-height: 50px;
 --font-sex: 'Poiret One', cursive;
 }
   body > section > div > div.culculator {
@@ -31,7 +31,7 @@ $pageDesc = "Как всё работает...";
   }
     body > section > div > div.culculator > div {
 
-      margin: 2.5%;
+      margin: 1em;
       flex-grow: 1;
       /* flex-basis: 300px; /*п perenos elementov na sledujuščuju stročku pri men'šej širine. Ranotaet tolko dlja elementov flex */ */
     }
@@ -50,8 +50,8 @@ $pageDesc = "Как всё работает...";
       }
 
         .info-block:nth-child(n+1){
-          height: 38px;
-          min-height: 34px;
+
+          min-height: var(--block-height);
           min-width: 280px;
         }
 
@@ -68,6 +68,7 @@ $pageDesc = "Как всё работает...";
           text-align: center;
           border-top-right-radius: 7px;
           border-bottom-right-radius: 7px;
+          border: 3px inset var(--color-primary);
         }
 
         .info-block output {
@@ -76,7 +77,7 @@ $pageDesc = "Как всё работает...";
           color: var(--color-second);
           min-width: 100px;
           text-align: center;
-
+          align-self: center;
         }
 
         .info-block > h4 {
