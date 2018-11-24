@@ -14,12 +14,12 @@ $pageDesc = "Как всё работает...";
 <style type="text/css">
 
 :root {
---color-primary: #d3d8fb24;
---color-second: #35424a;
+--color-primary: #263f78ba; /* #487df6 */
+--color-second: #d3d8fb24;
 --color-cold: whitesmoke;
 --color-warning: #f62459;
---gradient-dark: linear-gradient(45deg, rgba(0,0,0,0.20), rgba(0,0,0,0));
---gradient-ligth: linear-gradient(-10deg, rgba(255,255,255,0), rgba(255,255,255,0.20));
+--gradient-dark: linear-gradient(145deg, rgba(0,0,0,0), rgba(0,0,0,0.20));
+--gradient-ligth: linear-gradient(45deg, rgba(255,255,255,0.35), rgba(255,255,255,0));
 --block-height: 50px;
 --font-sex: 'Poiret One', cursive;
 }
@@ -42,11 +42,12 @@ $pageDesc = "Как всё работает...";
         justify-content: space-between;
         align-content: center;
         background-color: var(--color-primary);
-        background-image: var(--gradient-dark);
+        background-image: var(--gradient-ligth);
         border-radius: 5px;
-        border: var(--color-cold) solid 0.5px;
+        /* border: 1px solid var(--color-cold); */
         margin-bottom: 10px;
         letter-spacing: 1px;
+        font-color: var(--color-cold);
       }
 
         .info-block:nth-child(n+1){
@@ -60,7 +61,7 @@ $pageDesc = "Как всё работает...";
           height: 25px;
           width: 25px;
           margin-left: 13px;
-          fill: var(--color-second);
+          fill: var(--color-cold);
         }
 
         .info-block input{
@@ -68,13 +69,13 @@ $pageDesc = "Как всё работает...";
           text-align: center;
           border-top-right-radius: 7px;
           border-bottom-right-radius: 7px;
-          border: 3px inset var(--color-primary);
+          border: 2px outset var(--color-primary);
         }
 
         .info-block output {
 
           background-color: var(--color-secondary);
-          color: var(--color-second);
+          color: var(--color-cold);
           min-width: 100px;
           text-align: center;
           align-self: center;
@@ -84,13 +85,14 @@ $pageDesc = "Как всё работает...";
           margin: auto auto auto 15px;
           width: 100%;
           font-size: 18px;
-          color: var(--color-second);
+          color: var(--color-cold);
         }
         label.info-block__radius {
           margin: auto;
           display: flex;
           justify-content: center;
           align-items: center;
+          color: var(--color-cold);
 
         }
           label.info-block__radius p{
@@ -109,7 +111,14 @@ $pageDesc = "Как всё работает...";
         flex-grow: 1;
         background-color: #fff0;
         border: var(--color-cold) solid 0.5px;
+        color: var(--color-cold);
         /* flex-shrink: 1; */
+      }
+      .btn-group button:hover,
+      .btn-group button:focus,
+      .btn-group button:focus.active,
+      .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+        color: var(--color-warning);
       }
 
 
