@@ -46,6 +46,7 @@ $pageDesc = "Как всё работает...";
         border-radius: 5px;
         border: var(--color-cold) solid 0.5px;
         margin-bottom: 10px;
+        letter-spacing: 1px;
       }
 
         .info-block:nth-child(n+1){
@@ -78,12 +79,11 @@ $pageDesc = "Как всё работает...";
 
         }
 
-        .info-block > h4{
+        .info-block > h4 {
           margin: auto auto auto 15px;
           width: 100%;
-          font-size: 17px;
+          font-size: 18px;
           color: var(--color-second);
-
         }
         label.info-block__radius {
           margin: auto;
@@ -94,7 +94,7 @@ $pageDesc = "Как всё работает...";
         }
           label.info-block__radius p{
             margin: auto 15px auto 0;
-            font-size: 16px;
+            font-weight: 300;
             flex-grow: 2;
 
           }
@@ -118,10 +118,13 @@ $pageDesc = "Как всё работает...";
     justify-content: space-between; */
     flex-direction: column;
   }
-      .info-block > h4 {
-        font-size: 14px;
-      }
 
+}
+@media screen and (max-width: 320px) {
+  .info-block > h4,
+  .info-block > p {
+    font-size: 13px;
+  }
 }
 
 
@@ -172,7 +175,7 @@ $pageDesc = "Как всё работает...";
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 8c-2.762 0-5 2.239-5 5v2h10v-2c0-2.761-2.238-5-5-5zm-3 5c0-1.654 1.346-3 3-3s3 1.346 3 3h-6zm13 0c0-5.523-4.477-10-10-10s-10 4.477-10 10h-2v8h24v-8h-2zm0 6h-2v-2h-1v2h-2v-3h-1v3h-2v-2h-1v2h-2v-2h-1v2h-2v-3h-1v3h-2v-2h-1v2h-2v-4h2v-2c0-4.418 3.582-8 8-8s8 3.582 8 8v2h2v4z"/></svg>
           </div>
-          <h4>Внутренний радуис (втулка), мм</h4>
+          <h4>Внутренний радуис, мм</h4>
           <output>11</output>
         </div>
         <div class="info-block">
