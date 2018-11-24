@@ -43,9 +43,7 @@ $pageDesc = "Как всё работает...";
         align-content: center;
         background-color: var(--color-primary);
         background-image: var(--gradient-dark);
-        /* flex-direction: row-reverse; */
         border-radius: 5px;
-
         border: var(--color-cold) solid 0.5px;
         margin-bottom: 10px;
       }
@@ -54,7 +52,6 @@ $pageDesc = "Как всё работает...";
           height: 38px;
           min-height: 34px;
           min-width: 280px;
-          /* flex-shrink: 1; */
         }
 
         .info-block > div.icon {
