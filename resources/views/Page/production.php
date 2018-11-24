@@ -42,20 +42,13 @@ $pageDesc = "Как всё работает...";
         align-content: center;
         background-color: var(--color-primary);
         background-image: var(--gradient-dark);
-       /* flex-direction: row-reverse; */
-
-       border-radius: 5px;
-       margin-bottom: 20px;
+        /* flex-direction: row-reverse; */
+        border-radius: 5px;
+        margin-bottom: 20px;
       }
 
         .info-block:nth-child(n+1){
-
-
-          /* align-content: center; */
           height: 38px;
-          /* position: inherit; */
-
-
           min-height: 34px;
           min-width: 280px;
           /* flex-shrink: 1; */
@@ -72,6 +65,8 @@ $pageDesc = "Как всё работает...";
         .info-block input{
           width: 80px;
           text-align: center;
+          border-top-right-radius: 7px;
+          border-bottom-right-radius: 7px;
         }
 
         .info-block output {
@@ -80,25 +75,40 @@ $pageDesc = "Как всё работает...";
           color: var(--color-second);
           min-width: 100px;
           text-align: center;
+
         }
 
         .info-block > h4{
-          margin: 5px auto 0px 15px;
-          align-self: left;
+          margin: auto auto auto 15px;
           width: 100%;
-          font-size: 16px;
+          font-size: 13px;
           color: var(--color-second);
-          /* shrink: 1; */
-          height: calc(var(--block-height)-5px);
-          /* background-image: var(--gradient-ligth); */
 
         }
-        .btn-group button {
+        label.info-block__radius {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          flex: 0 0 100px;
           flex-grow: 1;
-          background-color: #fff0;
-          border-color: var(--color-white);
-          /* flex-shrink: 1; */
+          /* flex-direction: column; */
         }
+          label.info-block__radius p{
+            margin: auto 15px auto 0;
+            font-size: 13px;
+          }
+          label.info-block__radius input{
+            margin: auto 5px auto 15px;
+            font-size: 13px;
+            width: auto;
+          }
+
+      .btn-group button {
+        flex-grow: 1;
+        background-color: #fff0;
+        border-color: var(--color-white);
+        /* flex-shrink: 1; */
+      }
 
 
 @media screen and (max-width: 600px) {
@@ -107,6 +117,9 @@ $pageDesc = "Как всё работает...";
     justify-content: space-between; */
     flex-direction: column;
   }
+      .info-block > h4 {
+        font-size: 13px;
+      }
 
 }
 
@@ -161,11 +174,11 @@ $pageDesc = "Как всё работает...";
           <h4>Внутренний радуис (втулка), мм</h4>
           <output>11</output>
         </div>
-        <div class="info-block radius">
+        <div class="info-block">
           <!-- <input class="info-block" type="range" min="11" max="25" step="1" value="11"> -->
-          <laber for="r12"><input id="r12" name="radius" type="radio" value="12">12 mm</laber>
-          <laber for="r18"><input id="r18" name="radius" type="radio" value="18">18 mm</laber>
-          <laber for="r25"><input id="r25" name="radius" type="radio" value="25">25 mm</laber>
+          <label class="info-block__radius" for="r12"><input id="r12" name="radius" type="radio" value="12"><p> 12мм</p></label>
+          <label class="info-block__radius" for="r18"><input id="r18" name="radius" type="radio" value="18"><p> 18мм</p></label>
+          <label class="info-block__radius" for="r25"><input id="r25" name="radius" type="radio" value="25"><p> 25мм</p></label>
         </div>
       </div>
 
