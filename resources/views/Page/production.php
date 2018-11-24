@@ -26,6 +26,7 @@ $pageDesc = "Как всё работает...";
     margin-top: 23px;
     display: flex;
     flex-wrap: wrap;
+    font-family: 'Poiret One', cursive;
 
   }
     body > section > div > div.culculator > div {
@@ -81,21 +82,22 @@ $pageDesc = "Как всё работает...";
         .info-block > h4{
           margin: auto auto auto 15px;
           width: 100%;
-          font-size: 13px;
+          font-size: 17px;
           color: var(--color-second);
 
         }
         label.info-block__radius {
+          margin: auto;
           display: flex;
-          justify-content: left;
+          justify-content: center;
           align-items: center;
-          flex: 0 0 100px;
-          flex-grow: 1;
-          /* flex-direction: column; */
+
         }
           label.info-block__radius p{
             margin: auto 15px auto 0;
-            font-size: 13px;
+            font-size: 16px;
+            flex-grow: 2;
+
           }
           label.info-block__radius input{
             margin: auto 5px auto 15px;
@@ -118,7 +120,7 @@ $pageDesc = "Как всё работает...";
     flex-direction: column;
   }
       .info-block > h4 {
-        font-size: 13px;
+        font-size: 14px;
       }
 
 }
