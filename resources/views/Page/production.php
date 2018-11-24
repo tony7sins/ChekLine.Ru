@@ -178,7 +178,7 @@ $pageDesc = "Как всё работает...";
           <!-- <input class="info-block" type="range" min="11" max="25" step="1" value="11"> -->
           <label class="info-block__radius" for="r12"><input id="r12" name="radius" type="radio" value="12"><p> 12мм</p></label>
           <label class="info-block__radius" for="r18"><input id="r18" name="radius" type="radio" value="18"><p> 18мм</p></label>
-          <label class="info-block__radius" for="r25"><input id="r25" name="radius" type="radio" value="25"><p> 25мм</p></label>
+          <label class="info-block__radius" for="r25"><input id="r25" name="radius" type="radio" value="26"><p> 26мм</p></label>
         </div>
       </div>
 
