@@ -15,9 +15,9 @@ $pageDesc = "Как всё работает...";
 
 :root {
 --color-primary: #364249; /* #263f78 #263f78 #263f78ba #487df6 */
---color-second: whitesmoke;
+--color-second: #c2f1ba;
 --color-cold: #f0ffffe6;
---color-warning: #eef15b; /*#f62459 #ff7876*/
+--color-warning: #e2e3c5; /*#eef15b #f62459 #ff7876*/
 --gradient-dark: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.20));
 --gradient-ligth: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0));
 --block-height: 50px;
@@ -64,7 +64,7 @@ $pageDesc = "Как всё работает...";
           height: 25px;
           width: 25px;
           margin-left: 13px;
-          fill: var(--color-cold);
+          fill: var(--color-second);
         }
 
         .info-block input{
@@ -79,8 +79,8 @@ $pageDesc = "Как всё работает...";
 
         .info-block output {
 
-          background-color: var(--color-secondary);
-          color: var(--color-warning);
+
+          color: var(--color-second);
           min-width: 100px;
           text-align: center;
           align-self: center;
