@@ -69,7 +69,7 @@ $pageDesc = "Как всё работает...";
           text-align: center;
           border-top-right-radius: 7px;
           border-bottom-right-radius: 7px;
-          border: 2px outset var(--color-primary);
+          /* border: 2px outset var(--color-primary); */
         }
 
         .info-block output {
@@ -110,7 +110,7 @@ $pageDesc = "Как всё работает...";
       .btn-group button {
         flex-grow: 1;
         background-color: #fff0;
-        border: var(--color-cold) solid 0.5px;
+        /* border: var(--color-cold) solid 0.5px; */
         color: var(--color-cold);
         /* flex-shrink: 1; */
       }
@@ -119,6 +119,7 @@ $pageDesc = "Как всё работает...";
       .btn-group button:focus.active,
       .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
         color: var(--color-warning);
+        height: calc(var(--block-height)-50px);
       }
 
 
@@ -185,12 +186,12 @@ $pageDesc = "Как всё работает...";
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 8c-2.762 0-5 2.239-5 5v2h10v-2c0-2.761-2.238-5-5-5zm-3 5c0-1.654 1.346-3 3-3s3 1.346 3 3h-6zm13 0c0-5.523-4.477-10-10-10s-10 4.477-10 10h-2v8h24v-8h-2zm0 6h-2v-2h-1v2h-2v-3h-1v3h-2v-2h-1v2h-2v-2h-1v2h-2v-3h-1v3h-2v-2h-1v2h-2v-4h2v-2c0-4.418 3.582-8 8-8s8 3.582 8 8v2h2v4z"/></svg>
           </div>
-          <h4>Внутренний радуис, мм</h4>
-          <output>11</output>
+          <h4>Внутренний диаметр, мм</h4>
+          <output>12</output>
         </div>
         <div class="info-block">
           <!-- <input class="info-block" type="range" min="11" max="25" step="1" value="11"> -->
-          <label class="info-block__radius" for="r12"><input id="r12" name="radius" type="radio" value="12"><p> 12мм</p></label>
+          <label class="info-block__radius" for="r12"><input checked="checked" id="r12" name="radius" type="radio" value="12"><p> 12мм</p></label>
           <label class="info-block__radius" for="r18"><input id="r18" name="radius" type="radio" value="18"><p> 18мм</p></label>
           <label class="info-block__radius" for="r26"><input id="r26" name="radius" type="radio" value="26"><p> 26мм</p></label>
         </div>
@@ -227,15 +228,15 @@ $pageDesc = "Как всё работает...";
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 21.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.305-15l-3.432 12h-10.428l-3.777-9h-2.168l4.615 11h13.239l3.474-12h1.929l.743-2h-4.195zm-13.805-4c6.712 1.617 7 9 7 9h2l-4 4-4-4h2s.94-6.42-3-9z"/></svg>
           </div>
-          <h4>Количество единиц в рачёте</h4>
+          <h4>Количество штук в рачёте</h4>
           <output id="totalQnty"></output>
         </div>
         <div class="info-block">
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4 14.083c0-2.145-2.232-2.742-3.943-3.546-1.039-.54-.908-1.829.581-1.916.826-.05 1.675.195 2.443.465l.362-1.647c-.907-.276-1.719-.402-2.443-.421v-1.018h-1v1.067c-1.945.267-2.984 1.487-2.984 2.85 0 2.438 2.847 2.81 3.778 3.243 1.27.568 1.035 1.75-.114 2.011-.997.226-2.269-.168-3.225-.54l-.455 1.644c.894.462 1.965.708 3 .727v.998h1v-1.053c1.657-.232 3.002-1.146 3-2.864z"/></svg>
           </div>
-          <h4>Цена штуку </h4>
-          <output id="pcCost">$00.00 руб.</output>
+          <h4>Цена штуку</h4>
+          <output id="pcCost"></output>
         </div>
         <div class="info-block">
           <div class="icon">
@@ -262,10 +263,10 @@ $(document).ready(function() {
     console.log(params);
   };
 
-  let price = 0.13;
-  let course = 65.7;
-  price = price*course;
-  let cashCourse = 72;
+  let priceEURO = 0.13;
+  let course = 72;
+  let margeProc = 30; //vvesti v procentah
+  let price = priceEURO * course * (1 + (margeProc/100));
   let paperWidth = $('.widthCulc').find('input').val();
   let paperLength = $('.lengthCulc').find('input').val();
   let pcDiametr;
@@ -339,35 +340,52 @@ $(document).ready(function() {
 
   // ----- rasčjoty ----- //
   const culcDiametr = () => {
-    let r = $('.sleeveCulc').find("output").val();
-    let d = ( Math.sqrt( ( (paperLength *100 *.055) + (r * Math.pow(2,Math.PI) ) ) ) / Math.PI).toFixed(2);
-    $('.resultCulc').find("output#diametr")
-      .val(`${d} см`);
+    let vtulka = $('.sleeveCulc').find("output").val();
+    let r = vtulka/2;
+    let length_mm = paperLength*1000;
+    let p = 55 / 1000;
+    let rBig = Math.sqrt( ((Math.PI * (r*r)) + (length_mm * p))/Math.PI);
+    let d = (2*rBig/10).toFixed(2);
+    $('.resultCulc').find("output#diametr").val(`${d} см`);
+
+    // console.log(r);
+    // console.log(length_mm);
 
     return pcDiametr = d;
   }
 
+
+
   const standartCrtnVoleum = () => {
-    let l = crtnParams.l;
-    let w = crtnParams.w;
-    let h = crtnParams.h;
+    let l = crtnParams.l/1000;
+    let w = crtnParams.w/1000;
+    let h = crtnParams.h/1000;
     let v = (l*w*h);
     return v;
   }
   const culcCrtnQnty = () => {
 
     // Объем переводим в метры
-    crtnQnty = (( standartCrtnVoleum() / 100) / ( Math.pow (2, pcDiametr) * (paperWidth/100)));
-    crtnQnty = (((crtnQnty*.9)/100)).toFixed(0);
+    let site = (pcDiametr/100);
+    let onePcVoleum = ( site * site * (paperWidth/1000) );
+    crtnQnty = ( standartCrtnVoleum() / onePcVoleum );
+    crtnQnty = crtnQnty.toFixed(0);
     $('.resultCulc').find("output#crtnQnty")
       .text(`${crtnQnty} шт.`);
+
+    // console.log(`${pcDiametr/10} diameter`);
+    // console.log(`${site} / ${Math.pow(2,site)} / ${(site*site)}storona`);
+    // console.log(`${Math.sqrt(4)} ${Math.pow(2,2)}kvadrat storony`);
+    // console.log(`${onePcVoleum} 1pcVoleum`);
+    // console.log(`${standartCrtnVoleum()} crtnVoleum`);
+
     return crtnQnty;
   }
 
   const costCulc = () => {
     let qnty = $('costCulc').find('input#qnty')
       .val();
-    return r = (price * cashCourse * (paperWidth/1000) * (paperLength/1000) * qnty);
+    return r = (price * (paperWidth/1000) * (paperLength) * qnty);
   };
 
   const calcTotalQnty = () => {
@@ -382,8 +400,9 @@ $(document).ready(function() {
   const calcCost = () => {
     totalCost = (totalQnty * (paperWidth/1000) * paperLength * price).toFixed(2);
     let pcCost = (totalCost/totalQnty).toFixed(2);
+    outset = (totalCost+'').replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
     $('.resultCulc').find("output#totalCost")
-      .text(`${totalCost} руб.`);
+      .text(`${outset} руб.`);
     $('.resultCulc').find("output#pcCost")
       .text(`${pcCost} руб.`);
   };
@@ -431,7 +450,7 @@ $(document).ready(function() {
       }
       $(`.widthCulc`).find(`div#widthButtons`).html(html); //metod append - dobavljaet a ne zateraet elementy
 
-      console.log(`равно ${paperWidth} : ${paperLength}`);
+      // console.log(`равно ${paperWidth} : ${paperLength}`);
       calcTotal();
   };
 
@@ -450,7 +469,7 @@ $(document).ready(function() {
         $('.lengthCulc').find('input').val(paperLength);
         $('.lengthCulc').find(`.lengthButton`).removeClass('active');
         $('.lengthCulc').find(`.lengthButton[value="${paperLength}"]`).addClass('active');
-        console.log(`равно ${paperWidth} : ${paperLength}`);
+        // console.log(`равно ${paperWidth} : ${paperLength}`);
         calcTotal();
       }
     );
@@ -477,7 +496,7 @@ $(document).ready(function() {
       paperWidth = this.value;
       widthInput(paperWidth);
       forOnStock();
-      console.log(`равно ${paperWidth} : ${paperLength}`);
+      // console.log(`равно ${paperWidth} : ${paperLength}`);
       calcTotal();
     }
   );
@@ -495,7 +514,7 @@ $(document).ready(function() {
       $('.widthCulc').find(`.widthButton`).removeClass('active');
       $('.widthCulc').find(`.widthButton[value=${paperWidth}]`).addClass('active');
 
-      console.log(`равно ${paperWidth} : ${paperLength}`);
+      // console.log(`равно ${paperWidth} : ${paperLength}`);
       calcTotal();
     }
   );
@@ -507,7 +526,7 @@ $(document).ready(function() {
       $('.lengthCulc').find(`.lengthButton`).removeClass('active');
       forOnStock();
 
-      console.log(`равно ${paperWidth} : ${paperLength}`);
+      // console.log(`равно ${paperWidth} : ${paperLength}`);
       calcTotal();
     }
   );
