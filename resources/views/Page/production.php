@@ -35,6 +35,9 @@ $pageDesc = "Как всё работает...";
       flex-grow: 1;
       /* flex-basis: 300px; /*п perenos elementov na sledujuščuju stročku pri men'šej širine. Ranotaet tolko dlja elementov flex */ */
     }
+    .costCulc > .form-group {
+        margin-bottom:0;
+    }
 
 
       body > section.culcBlock > div.container > div.wrap.culculator > div > div > div.info-block {
