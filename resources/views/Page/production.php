@@ -14,12 +14,12 @@ $pageDesc = "Как всё работает...";
 <style type="text/css">
 
 :root {
---color-primary: #263f78ba; /* #487df6 */
---color-second: #d3d8fb24;
---color-cold: whitesmoke;
---color-warning: #f62459;
---gradient-dark: linear-gradient(145deg, rgba(0,0,0,0), rgba(0,0,0,0.20));
---gradient-ligth: linear-gradient(45deg, rgba(255,255,255,0.35), rgba(255,255,255,0));
+--color-primary: #364249; /* #263f78 #263f78 #263f78ba #487df6 */
+--color-second: whitesmoke;
+--color-cold: #42efef;
+--color-warning: #fdff76; /*#f62459 #ff7876*/
+--gradient-dark: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.20));
+--gradient-ligth: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0));
 --block-height: 50px;
 --font-sex: 'Poiret One', cursive;
 }
@@ -69,13 +69,15 @@ $pageDesc = "Как всё работает...";
           text-align: center;
           border-top-right-radius: 7px;
           border-bottom-right-radius: 7px;
+          background-color: var(--color-cold);
+          background-image: var(--gradient-dark);
           /* border: 2px outset var(--color-primary); */
         }
 
         .info-block output {
 
           background-color: var(--color-secondary);
-          color: var(--color-cold);
+          color: var(--color-warning);
           min-width: 100px;
           text-align: center;
           align-self: center;
@@ -118,8 +120,9 @@ $pageDesc = "Как всё работает...";
       .btn-group button:focus,
       .btn-group button:focus.active,
       .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
-        color: var(--color-warning);
-        height: calc(var(--block-height)-50px);
+        color: var(--color-primary);
+        background-color: var(--color-cold);
+        /* height: calc(var(--block-height)-50px); */
       }
 
 
