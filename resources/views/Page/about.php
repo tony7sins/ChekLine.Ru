@@ -1,11 +1,14 @@
 <?php
-$title = "ЧекЛайн";
+;
 $showcase = "main";
 $pageHeader = "О Нас";
 $pageDesc = "букавально пара слов...";
 ?>
 
+<?= $title ?>
+<?= $someVal ?>
 <?php require_once VIEW . "/layouts/_pageHeader.php";?>
+
 
 <section class="skewedBox" id="skewedBox">
   <div class="container-fluid wrap">

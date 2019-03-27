@@ -5,18 +5,18 @@ $pageHeader = "Контакты";
 $pageDesc = "Свяжитесь с нами...";
 ?>
 
-<?php require_once VIEW . "/layouts/_pageHeader.php";?>
+<?php require_once VIEW . "/layouts/_pageHeader.php"; ?>
 
 <section class="contacts" id="contacts">
   <div class="container">
     <div class="row">
       <div class="grid_elem" id="cont__tel">
         <h3>Телефон</h3>
-        <h4><a href="tel: +74955091243">+7(495)509-12-43</a></h4>
+        <h4><a href="tel: +74994994174">+7 (499) 499-4174</a></h4>
       </div>
       <div class="grid_elem" id="cont__mail">
       	<h3>Email</h3>
-      	<h4><a href="mailto: makeev.o@mail.ru">makeev.o@mail.ru</a></h4>
+      	<h4><a href="mailto: smy@chekline.ru">smy@chekline.ru</a></h4>
       </div>
 			<div class="grid_elem" id="cont__adress">
 				<h3>Адрес</h3>

@@ -11,7 +11,7 @@
       <meta name="keywords" content="бумага, чеки, лента, термобумага, производство">
       <meta name="author" content="t7s_design">
       <!-- Jaklyk vkladki -->
-      <title><?= $title; ?> | <?= $pageHeader; ?></title>
+      <title><?= htmlspecialchars($title); ?> | <?= htmlspecialchars($pageHeader); ?></title>
       <!-- Bootstrap -->
       <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
       <!-- Custum CSS -->
@@ -36,6 +36,7 @@
     </header>
 
     <!-- Content, image and text -->
+
     <?= $content ?>
 
     <!-- Footer -->

@@ -1,8 +1,8 @@
 <nav id="navbar-menu" class="navbar-menu">
-  <a id="logo__link" href="tel: +74955091243">
+  <a id="logo__link" href="tel: +74994994174">
     <div class="logo">
       <h1><i class="fas fa-phone"></i></h1>
-      <p>+7 (495) 509-12-43</p>
+      <p>+7 (499) 499-4174</p>
     </div>
   </a>
 
@@ -16,8 +16,8 @@
       <ul>
         <li><a href="/">главная</a></li>
         <!-- <li role="separator" class="divider"></li> -->
-        <li><a href="tel: +74991391954">позвонить</a></li>
-        <li><a href="mailto: makeev.o@mail.ru">написать</a></li>
+        <li><a href="tel: +74994994174">позвонить</a></li>
+        <li><a href="mailto: smy@chekline.ru">написать</a></li>
         <!-- <li><a href="#"></a></li> -->
       </ul>
     </li>

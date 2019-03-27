@@ -5,7 +5,7 @@ namespace app\Http\Controllers;
 // PostNew controller - Opisanie
 
 //class PostsNew extends \app\http\controllers\Controller {
-class PostsNewController extends AppController {
+class TestController extends AppController {
 
 	public function indexAction() {
 		//debug($this->route);

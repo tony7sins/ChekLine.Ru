@@ -1,8 +1,8 @@
-<section class="pageHeader" id="<?php echo $showcase; ?>">
+<section class="pageHeader" id="<?= htmlspecialchars($showcase); ?>">
   <div class="container-fluid">
     <div class="row">
-      <h1><?php echo $pageHeader; ?></h1><br>
-      <p><?php echo $pageDesc; ?></p>
+      <h1><?= htmlspecialchars($pageHeader); ?></h1><br>
+      <p><?= htmlspecialchars($pageDesc); ?></p>
     </div>
   </div>
 </section>

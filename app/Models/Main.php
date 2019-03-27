@@ -1,12 +1,16 @@
-<?php 
+<?php
+// tut sozdajutsja task-i :-)
 namespace app\Models;
+
+use \resources\vendor\core\base\Model as Model;
 	/**
 	* Opisanie Main
 	**/
-class Main extends \resources\vendor\core\base\Model {
+class Main extends Model {
 
-	public $table = 'posts';
+	public $table = 'customers';
+	// protected $pk = 'firstName';
+
 
 }
 ?>
-

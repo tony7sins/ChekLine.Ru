@@ -4,12 +4,9 @@ $showcase = "main";
 $pageHeader = "Продукция";
 $pageDesc = "Как всё работает...";
 ?>
-
+<?php /* echo  $someVal; */ ?>
+<?php /* echo  $getVal; */?>
 <?php require_once VIEW . "/layouts/_pageHeader.php";?>
-
-
-
-
 
 <style type="text/css">
 

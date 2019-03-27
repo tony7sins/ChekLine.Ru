@@ -306,8 +306,10 @@ header {
 			text-align: center;
 			margin: 0 1.5% 0 0;
 			max-height: 350px;
+			min-height: 320px;
 		}
-		#boxes svg {
+		#boxes svg,
+		.main-icon {
 			min-width: 80px;
 			font-size: 60px;
 		}
